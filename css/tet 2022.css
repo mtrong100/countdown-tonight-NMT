@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Shadows+Into+Light&family=Work+Sans:ital@0;1&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url(../img/photo-1552402770-a90aa30f8aa1.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:sans-serif;
+    width: 100vw;
+    height: 100vh;
+    /* width: 100%;
+    height: 100%; */
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: white;
+}
+.container h2 {
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1.9;
+    font-size: 50px;
+    color: greenyellow;
+    text-transform: uppercase;
+}
+.container span {
+    display: block;
+    font-weight: bold;
+    font-size: 150px;
+    text-align: center;
+    color: tomato;
+    font-family:'Poppins';
+}
+.countdown .time #days,
+.countdown .time #hours,
+.countdown .time #minutes,
+.countdown .time #seconds {
+    width: 150px;
+    height: 150px;
+    background-color: #272d40;
+    line-height: 150px;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    margin: 0 20px;
+    box-shadow: 5px 10px 5px 5px  rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.countdown .time {
+    display: flex;
+    flex-direction: column;
+}
+.countdown .time small {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button .icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px 5px rgba(51, 255, 0, 0.5); 
+}
