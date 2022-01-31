@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2e4012a7da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/tet 2022.css">
+    <title>Countdown Tết âm lịch 2022</title>
+</head>
+<body>
+    <div class="container">
+        <h2>
+            <img src="./img/pixlr-bg-result.png" width="100px" alt="">
+            Countdown     Tết     Nhâm     Dần  <img src="./img/pixlr-bg-result.png" width="100px" alt="">
+            <span>2022</span> 
+        </h2>
+    </div>
+    <div class="countdown">
+        <div class="time">
+            <h2 id="days">00</h2>
+            <small>days</small>
+        </div>
+
+        <div class="time">
+            <h2 id="hours">00</h2>
+            <small>hours</small>
+        </div>
+
+        <div class="time">
+            <h2 id="minutes">00</h2>
+            <small>minutes</small>
+        </div>
+
+        <div class="time">
+            <h2 id="seconds">00</h2>
+            <small>seconds</small>
+        </div>
+    </div>
+
+    <div class="button">
+        <img class="icon" src="./img/icon1.png" alt="">
+     </div>
+     <audio class="tet" src="./img/yt1s.io - Nhật Chàm x Hoàng - Ngày Xuân Long Phụng Sum Vầy VITAS _ BẢN FULL _ TẾT 2020 (128 kbps).mp3"></audio>
+    <script>
+              var tetAmLich = new Date('Feb 1, 2022 00:00:00').getTime();
+            
+            function newYear() {
+                /*Lấy thời gian ngày hiện tại (mily giây) */
+                var ngayHienTai = new Date().getTime();
+
+                /*Tính thời gian còn lại (mily giây) */
+                thoigianConLai = tetAmLich - ngayHienTai;
+
+                /*Chuyển đơn vị thời gian tương ứng sang mili giây*/
+                var giay = 1000;
+                var phut = giay * 60;
+                var gio = phut * 60;
+                var ngay = gio * 24;
+
+                /*Tìm ra thời gian theo ngày, giờ, phút giây còn lại thông qua cách chia lấy dư(%) và làm tròn số(Math.floor) trong Javascript*/
+                var d = Math.floor(thoigianConLai / (ngay));
+                var h = Math.floor((thoigianConLai % (ngay)) / (gio));
+                var m = Math.floor((thoigianConLai % (gio)) / (phut));
+                var s = Math.floor((thoigianConLai % (phut)) / (giay));
+
+                /*Hiển thị kết quả ra các thẻ Div với ID tương ứng*/
+                document.getElementById("days").innerText = d;
+                document.getElementById("hours").innerText = h;
+                document.getElementById("minutes").innerText = m;
+                document.getElementById("seconds").innerText = s;
+            }
+
+            /*Thiết Lập hàm sẽ tự động chạy lại sau 1s*/
+            setInterval (function(){
+                newYear();
+            }, 1000)
+
+    </script>
+
+    <script>
+        const icon = document.querySelector(".icon");
+        const song = document.querySelector(".tet");
+        icon.onclick = function() {
+                if (song.paused) {
+                        song.play();
+                        icon.src = "./img/icon2.png";
+                } else {
+                        song.pause();
+                        icon.src = "./img/icon1.png";
+                }
+        }
+    </script>
+</body>
+</html>
